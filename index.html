@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+    <title>Post Master</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h4 style="color: white;margin-top:15px;"> Post Master</h1>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Welcome To Post Master</h1><br>
+        <div class="row">
+            <div class="col-sm-2 form">
+                <h5>URL</h5>
+            </div>
+            <div class="col-sm-10 form">
+                <input type="text" class="form-control" id="Url" placeholder="Enter The URL..">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-2">
+                <h5>Reuqest Type</h5>
+            </div>
+            <div class="col-sm-10">
+                <select class="form-control" id="sel1">
+                    <option>Select</option>
+                    <option>GET</option>
+                    <option>POST</option>
+                    <option>PUT</option>
+                    <option>DELETE</option>
+                    <option>PATCH</option>
+                  </select>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-2">
+                <h5>Content Type</h5>
+            </div>
+            <div class="col-sm-10">
+                <input type="radio" id="JSON" name="content" value="JSON">
+                <label for="JSON">JSON</label><br>
+                <input type="radio" id="custom_parameters" name="content" value="custom_parameters">
+                <label for="custom_parameters">Custom Parameters</label><br>
+            </div>
+        </div>
+        <br>
+        <div class="row" id="ParameterBox">
+            <div class="col-sm-2 form">
+                <h5>Parameter 1</h5>
+            </div>
+            <div class="col-sm-4 form">
+                <input type="text" class="form-control" id="Parameter_Key1" placeholder="Enter The Parameter Key 1">
+            </div>
+            <div class="col-sm-4 form">
+                <input type="text" class="form-control" id="Parameter_Value1" placeholder="Enter The Parameter Value 1">
+            </div>
+            <div class="col-sm-1 form">
+                <input type="button" class="btn btn-primary form-control" value="+" id="AddParam">
+            </div>
+        </div>
+        <div id=Params></div>
+        <div class="row" id="JsonBox">
+            <div class="col-sm-2">
+                <h5>Enter Required JSON</h5>
+            </div>
+            <div class="col-sm-10">
+                <div class="form-group">
+                    <textarea class="form-control" rows="3" id="jsontext" placeholder="Enter the JSON Format"></textarea>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <input type="button" class="btn btn-primary" value="Submit" id="Submit">
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-2">
+                <h5>Response</h5>
+            </div>
+            <div class="col-sm-10">
+                <div class="form-group">
+                    <textarea class="form-control" rows="3" id="resultresponse" placeholder="Your Response Will be Shown Here..!!"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+<script src=PostMan.js></script>
+
+</html>
